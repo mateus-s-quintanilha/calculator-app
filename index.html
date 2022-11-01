@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+  <link id="style-link" rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <div id="title">
+        calc
+      </div>
+      <div id="theme">
+        <span>theme</span>
+        <div class="toggle">
+          <input id="toggle_switch" name="toggle_switch" type="checkbox" checked/>
+          <label for="toggle_switch"></label>
+        </div>
+      </div>
+  
+    </header>
+
+    <main>
+      <div class="display">
+        <span id="number">--</span>
+      </div>
+      <div class="dashboard">
+        <div id="row-1">
+          <button class="button">7</button>
+          <button class="button">8</button>
+          <button class="button">9</button>
+          <button id="action-btn">DEL</button>
+        </div>
+        <div id="row-2">
+          <button class="button">4</button>
+          <button class="button">5</button>
+          <button class="button">6</button>
+          <button class="button" id="plus-button">+</button>
+        </div>
+        <div id="row-3">
+          <button class="button">3</button>
+          <button class="button">2</button>
+          <button class="button" style="padding: .7rem 2.5rem;">1</button>
+          <button class="button" id="sub-button" style="padding: .7rem 2.4rem;">-</button>
+        </div>
+        <div id="row-4">
+          <button class="button" style="padding: .7rem 2.55rem;">.</button>
+          <button class="button">0</button>
+          <button class="button" class="op-button" id="div-button">/</button>
+          <button class="button" id="mult-button" style="padding: .7rem 2.25rem;">x</button>
+        </div>
+        <div class="main-btns">
+          <button id="reset-btn">RESET</button>
+          <button id="result-btn">=</button>
+        </div>
+      </div>
+  
+    </main>
+
+  </div>
+  
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+<script src="./index.js"></script>
+</html>

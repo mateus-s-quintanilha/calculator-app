@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(60, 10%, 19%);
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%; 
+    font-size: 1.6rem;
+   
+}
+
+main {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%; 
+    padding-bottom: 2rem;
+}
+
+main .display {
+    background-color: hsl(0, 0%, 93%);
+    padding: 2rem;
+    width: 90%;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+main .display #number {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+main .dashboard {
+    background-color: hsl(0, 5%, 81%);
+    width: 90%;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+main .dashboard button {
+    padding: .7rem 2.3rem;
+    border: none;
+    cursor: pointer;
+    background-color: hsl(45, 7%, 89%);
+    color: hsl(221, 14%, 31%);
+    font-size: 2rem;
+    font-family: 'League Spartan', sans-serif;
+    border-radius: .6rem;
+}
+
+main .dashboard button:not(#action-btn, .main-btns > button) {
+    box-shadow: hsl(35, 11%, 61%) .1px 3px;
+}
+
+#row-1, #row-2, #row-3, #row-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+#row-1 > button:hover:not(#action-btn), #row-2 > button:hover, #row-3 > button:hover, #row-4 > button:hover {
+    transition: .3s;
+    background-color: #FFF;
+
+}
+#row-1 > button:disabled:not(#action-btn), #row-2 > button:disabled, #row-3 > button:disabled, #row-4 > button:disabled {
+    background-color: hsla(226, 9%, 55%, 0.5);
+    color: #FFF;
+    opacity: 0.5;
+    cursor: default;
+}
+
+#action-btn {
+    background-color: hsl(185, 42%, 37%);
+    font-size: 1.5rem;
+    padding: .8rem 1.65rem;
+    font-size: 1.5rem;
+    color: #FFF;
+    box-shadow: hsl(185, 58%, 25%) .1px 3px;
+}
+
+#action-btn:hover {
+    transition: .3s;
+    background-color: hsl(228, 25%, 61%);
+    color: hsl(30, 25%, 89%);
+}
+
+.main-btns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-btns > button {
+    width: 48%;
+}
+
+#reset-btn {
+    margin-left: -.6rem;
+    font-size: 1.5rem;
+    padding: 1rem 2.3rem;
+    background-color: hsl(185, 42%, 37%);
+    color: #FFF;
+    box-shadow: hsl(185, 58%, 25%) .1px 3px;
+}
+
+#result-btn {
+    margin-right: -.6rem;   
+    font-size: 1.5rem;
+    padding: 1rem 2.3rem;
+    background-color: hsl(25, 98%, 40%);
+    color: #FFF;
+    box-shadow: hsl(25, 99%, 27%) .1px 3px;
+}
+
+
+
+
+
+
+#theme {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+label {
+    display: block;
+    width: 55px;
+    height: 25px;
+    background-color: hsl(30, 25%, 89%);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 50px #477a85;
+    margin-top: -1.3rem;
+}
+
+label::after {
+    content: "";
+    width: 120px;
+    height: 120px;
+    background-color: hsl(225, 21%, 49%);
+    position: absolute;
+    border-radius: 70px;
+    top: 15px;
+    left: 15px;
+    transition: 0.5s;
+}
+
+label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: hsl(225, 21%, 49%);
+    position: absolute;
+    border-radius: 70px;
+    top: 2.2px;
+    left: 4px;
+    transition: 0.5s;
+}
+
+
+input:checked + label:after {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+}
